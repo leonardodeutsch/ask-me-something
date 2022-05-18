@@ -12,6 +12,7 @@ class AddPrompt extends React.Component {
 
     this.handlePrompt = this.handlePrompt.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.selectEngine = this.selectEngine.bind(this);
   }
 
   handlePrompt(e) {
@@ -34,7 +35,7 @@ class AddPrompt extends React.Component {
       presence_penalty: 0.0
     }
 
-    axios.post('https://api.openai.com/v1/engines/text-curie-001/completions', data, config)
+    axios.post(`https://api.openai.com/v1/engines/${this.state.engine}/completions`, data, config)
     .then(res => {
       this.props.save({
         id: res.data.id, 
@@ -56,7 +57,7 @@ class AddPrompt extends React.Component {
       <div className="add-prompt-container">
         <div className="engine-select-container">
           Select OpenAI Engine
-          <select className="engine-select" defaultValue="text-curie-001">
+          <select className="engine-select" defaultValue="text-curie-001" onChange={this.selectEngine}>
             <option value="text-davinci-002">Davinci</option>
             <option value="text-curie-001">Curie</option>
             <option value="text-babbage-001">Babbage</option>
