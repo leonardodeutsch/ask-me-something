@@ -1,4 +1,75 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
 h1 {
-  color: white;
-  background-color: black;
+  color: black;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 25%;
+}
+
+/* 
+==================================================
+AddPrompt 
+==================================================
+*/
+
+.add-prompt-container {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.engine-select {
+  width: 100px;
+  padding: 5px;
+  margin: 0 10px 5px 5px;
+  border-radius: 100px;
+}
+
+.prompt {
+  height: 100px;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.submit-prompt {
+  align-self: center;
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* 
+==================================================
+EntriesList
+==================================================
+*/
+
+.entries-container {
+  margin: 10px 5%;
+}
+
+/* 
+==================================================
+Entry
+==================================================
+*/
+
+.answer-entry-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 25px;
+  border-radius: 25px;
+  background-color: red;
 }
