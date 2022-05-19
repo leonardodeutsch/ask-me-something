@@ -12,41 +12,51 @@ class Entry extends React.Component {
   }
 
   handleColor(engine) {
-    if (engine === 'text-davinci:002') {
-      return 'orange';
-    } else if (engine === 'text-curie:001') {
-      return 'green';
-    } else if (engine === 'text-babbage:001') {
-      return 'yellow';
-    } else if (engine === 'text-ada:001') {
-      return 'purple';
+    if (engine === 'text-davinci:002' || engine === 'text-davinci-002') {
+      return 'rgb(73 148 241)';
+    } else if (engine === 'text-curie:001' || engine === 'text-curie-001') {
+      return 'rgb(255 131 131)';
+    } else if (engine === 'text-babbage:001' || engine === 'text-babbage-001') {
+      return 'rgb(91 173 112)';
+    } else if (engine === 'text-ada:001' || engine === 'text-ada-001') {
+      return 'rgb(203 101 195)';
     }
   }
   handleName(engine) {
-    if (engine === 'text-davinci:002') {
+    if (engine === 'text-davinci:002' || engine === 'text-davinci-002') {
       return 'Davinci';
-    } else if (engine === 'text-curie:001') {
+    } else if (engine === 'text-curie:001' || engine === 'text-curie-001') {
       return 'Curie';
-    } else if (engine === 'text-babbage:001') {
+    } else if (engine === 'text-babbage:001' || engine === 'text-babbage-001') {
       return 'Babbage';
-    } else if (engine === 'text-ada:001') {
+    } else if (engine === 'text-ada-001' || engine === 'text-ada-001') {
       return 'Ada';
     }
   }
 
   render() {
     return(
-      <div className="answer-entry-container">
+      <div className="entry-container">
         <div className="engine-tag" style={{background: this.handleColor(this.props.entry.engine)}}>
           {this.handleName(this.props.entry.engine)}
         </div>
-        <div>
-          Prompt: {this.props.entry.prompt}
+        <div className="prompt-container">
+          <div className="entry-header">
+            Prompt:
+          </div>
+          <div className="entry-body">
+            {this.props.entry.prompt}
+          </div>
         </div>
-        <div>
-          Answer: {this.props.entry.answer}
+        <div className="answer-container">
+          <div className="entry-header">
+            Answer:
+          </div>
+          <div className="entry-body">
+            {this.props.entry.answer}
+          </div>
         </div>
-        <div>
+        <div className="timestamp-container">
           Asked {moment(this.props.entry.timestamp).startOf('second').fromNow()}
         </div>
       </div>

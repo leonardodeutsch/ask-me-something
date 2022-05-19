@@ -25,13 +25,14 @@ class App extends React.Component {
 
   saveEntries(answer) {
     this.setState(prevState => ({entries: [...prevState.entries, answer]}));
-    console.log(this.state.entries);
   }
 
   render() {
     return(
       <div className="main">
-        <h1>Ask me something!</h1>
+        <div className="header">
+          <h1>Ask me something!</h1>
+        </div>
         <AddPrompt save={this.saveEntries}/>
         <EntriesList entries={this.state.entries} />
       </div>
