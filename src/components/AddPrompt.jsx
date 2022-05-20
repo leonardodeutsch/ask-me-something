@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import API_KEY from '../../config.js';
+// import API_KEY from '../../config.js';
 
 import Preset from './Preset.jsx';
 import loading from '../images/loading.png';
@@ -40,7 +40,7 @@ class AddPrompt extends React.Component {
       let config = {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${API_KEY}`
+          Authorization: `Bearer ${process.env.API_KEY}`
         }
       }
       let data = {
