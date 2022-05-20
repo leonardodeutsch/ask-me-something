@@ -4,7 +4,10 @@ const Preset = ({preset, click}) => {
 
   return (
     <div className="preset-container">
-      <div onClick={() => {click(preset)}}>{preset.presetName}</div>
+      <div className="preset-icon" onClick={() => {click(preset)}} style={{background: preset.presetColor}}>
+        <i class={preset.presetIcon}></i>
+      </div>
+      <div >{preset.presetName}</div>
     </div>
   );
 }

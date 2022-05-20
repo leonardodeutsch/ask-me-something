@@ -105,11 +105,13 @@ class AddPrompt extends React.Component {
             <img className="loading" src={loading}/>
           }
         </div> 
-        <div className="preset-container">
-          Presets
-          {presets.map(preset => (
-            <Preset key={preset.presetId} preset={preset} click={this.handlePreset}/>
-          ))}
+        <div className="presets-container">
+          <div className="presets-header">Need some help? Try these presets!</div>
+          <div className="presets-buttons">
+            {presets.map(preset => (
+              <Preset key={preset.presetId} preset={preset} click={this.handlePreset}/>
+            ))}
+          </div>
         </div>
       </div>
     );
