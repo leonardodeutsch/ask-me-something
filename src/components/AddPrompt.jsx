@@ -62,6 +62,12 @@ class AddPrompt extends React.Component {
           timestamp: new Date()
         });
         this.setState({loading: false});
+        if (window.innerHeight < 1000) {
+          window.scrollTo({
+            top: 1000,
+            behavior: 'smooth'
+          })
+        }
       })
     }
   }
