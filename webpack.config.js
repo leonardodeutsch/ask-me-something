@@ -41,9 +41,7 @@ const config = {
   },
   plugins: [
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
-    new EnvironmentPlugin({
-      API_KEY: ''
-    })
+    new EnvironmentPlugin(['API_KEY'])
   ]
 };
 
