@@ -91,11 +91,12 @@ AddPrompt
   justify-content: center;
   align-items: center;
   color: rgb(46, 46, 46);
-  margin: 50px 15% 0 15%;
+  margin: 25px 15%;
 }
 
 .presets-header {
   font-size: 110%;
+  margin: 15px 0;
 }
 
 .presets-buttons {
@@ -107,7 +108,6 @@ AddPrompt
 .preset-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 128px;
   height: 128px;
@@ -132,6 +132,10 @@ AddPrompt
 
 .preset-icon:active {
   transform: scale(0.9);
+}
+
+.icon-name {
+  text-align: center;
 }
 
 
@@ -201,4 +205,27 @@ Entry
   align-self: flex-end;
   font-style: italic;
   font-size: 90%;
+}
+
+@media only screen and (max-width: 1050px) {
+  .add-prompt-container {
+    margin: 5% 5%;
+  }
+
+  .entries-container {
+    margin: 10px 2%;
+  }
+
+  .presets-container {
+    margin: 50px 1% 0 1%;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .presets-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
 }
