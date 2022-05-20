@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const { EnvironmentPlugin } = require('webpack')
+const { DefinePlugin } = require('webpack')
 
 const config = {
   entry: './src/index.js',
@@ -41,7 +41,9 @@ const config = {
   },
   plugins: [
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
-    new webpack.EnvironmentPlugin(['API_KEY'])
+    new webpack.DefinePlugin({
+      'process.env.API_KEY': JSON.stringify(process.env.API_KEY || '')
+    })
   ]
 };
 
