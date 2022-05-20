@@ -3,6 +3,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(rgb(255, 255, 255), rgb(243, 243, 243));
 }
+
 h1 {
   color: rgb(255, 255, 255);
   font-size: 70px;
@@ -79,6 +80,10 @@ AddPrompt
   max-width: 40px;
   align-self: center;
   margin-top: 10px;
+}
+
+.preset-container {
+  display: flex;
 }
 
 
