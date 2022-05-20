@@ -64,7 +64,7 @@ class AddPrompt extends React.Component {
         this.setState({loading: false});
         if (window.innerHeight < 1000) {
           window.scrollTo({
-            top: 1000,
+            top: 800,
             behavior: 'smooth'
           })
         }
