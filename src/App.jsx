@@ -31,7 +31,7 @@ class App extends React.Component {
     return(
       <div className="main">
         <div className="header">
-          <h1>Ask me something!</h1>
+          <h1>Ask me something! {process.env.API_KEY}</h1>
         </div>
         <AddPrompt save={this.saveEntries}/>
         <EntriesList entries={this.state.entries} />
