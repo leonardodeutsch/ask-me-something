@@ -1,8 +1,8 @@
 # Ask Me Something!
 
-A front-end application that uses OpenAI API to analyze a prompt and generate a natural language response.
+A front-end application that uses [OpenAI API](https://openai.com/api/) to analyze a prompt and generate a natural language response. Currently being hosted on Cloudflare, feel free to try it out [here](https://ask-me-something.pages.dev/)!
 
-![AskMeSomething](https://live.staticflickr.com/65535/52088121955_00d689e114_h.jpg)
+![AskMeSomething](https://live.staticflickr.com/65535/52087660983_2a40e3eb22_o.png)
 
 ## Features
 - Allows the user to pick which OpenAI Engine they want their prompt analyzed with.
