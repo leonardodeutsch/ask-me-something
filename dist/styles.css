@@ -66,6 +66,7 @@ AddPrompt
   margin-top: 10px;
   border-radius: 10px;
   box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.6);
+  cursor: pointer;
 }
 
 .submit-prompt:hover {
@@ -124,6 +125,7 @@ AddPrompt
   border-radius: 10px;
   box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.6);
   transition: all 0.2s ease-out;
+  cursor: pointer;
 }
 
 .preset-icon:hover {
